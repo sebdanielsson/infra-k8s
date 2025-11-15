@@ -4,4 +4,4 @@ kind: Kustomization
 namespace: metallb-system
 
 resources:
-  - ../homelab/kustomization.yaml
+  - ../talos/kustomization.yaml
