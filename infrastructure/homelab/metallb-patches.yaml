@@ -1,0 +1,24 @@
+---
+- target:
+    group: metallb.io
+    version: v1beta1
+    kind: IPAddressPool
+    name: default
+    namespace: metallb-system
+  patch: |-
+    - op: replace
+      path: /spec/addresses
+      value:
+        - 192.168.1.245-192.168.1.250
+
+- target:
+    group: metallb.io
+    version: v1beta1
+    kind: L2Advertisement
+    name: default
+    namespace: metallb-system
+  patch: |-
+    - op: replace
+      path: /spec/ipAddressPools
+      value:
+        - default
