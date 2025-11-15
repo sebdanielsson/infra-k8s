@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -14,15 +15,15 @@ spec:
         app: hello-world
     spec:
       containers:
-      - name: hello-world
-        image: nginxdemos/nginx-hello:latest
-        ports:
-        - containerPort: 8080
-          name: http
-        resources:
-          requests:
-            cpu: 50m
-            memory: 64Mi
-          limits:
-            cpu: 100m
-            memory: 128Mi
+        - name: hello-world
+          image: nginxdemos/nginx-hello:latest
+          ports:
+            - containerPort: 8080
+              name: http
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              cpu: 100m
+              memory: 128Mi

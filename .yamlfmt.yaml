@@ -1,4 +1,7 @@
-
+---
+#  Yamlfmt configuration file
+#  For more details, see:
+#  https://github.com/google/yamlfmt/blob/main/docs/config-file.md
 line_ending: lf
 formatter:
   type: basic
