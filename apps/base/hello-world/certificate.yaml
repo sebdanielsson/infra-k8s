@@ -1,0 +1,13 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: hello-world-tls
+  namespace: hello-world
+spec:
+  secretName: hello-world-tls
+  dnsNames:
+    - hello.hogwarts.zone
+  issuerRef:
+    kind: ClusterIssuer
+    name: letsencrypt-dns01-cloudflare
