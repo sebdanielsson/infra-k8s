@@ -32,3 +32,7 @@ jobs:
       - name: yamlfmt
         run: |
           go run github.com/google/yamlfmt/cmd/yamlfmt@latest -- .
+
+      - name: Kustomize build
+        run: |
+          go run sigs.k8s.io/kustomize/kustomize/v5@latest build clusters/talos
