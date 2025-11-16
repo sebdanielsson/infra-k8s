@@ -4,9 +4,8 @@ kind: Kustomization
 
 resources:
   - namespace.yaml
-  - deployment.yaml
+  - serviceaccount.yaml
+  - clusterrolebinding.yaml
   - service.yaml
-
-commonLabels:
-  app.kubernetes.io/name: hello-world
-  app.kubernetes.io/version: latest
+  - service-headless.yaml
+  - deployment.yaml

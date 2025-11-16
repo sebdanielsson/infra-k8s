@@ -16,14 +16,6 @@ spec:
     spec:
       containers:
         - name: hello-world
-          image: nginxdemos/nginx-hello:latest
+          image: ghcr.io/fluxcd/hello-world:latest
           ports:
-            - containerPort: 8080
-              name: http
-          resources:
-            requests:
-              cpu: 50m
-              memory: 64Mi
-            limits:
-              cpu: 100m
-              memory: 128Mi
+            - containerPort: 80
