@@ -4,6 +4,5 @@ kind: Kustomization
 
 resources:
   - metallb/
-  - cert-manager/
   - traefik/
   - portainer-agent/
