@@ -13,7 +13,7 @@ spec:
   interval: 30m
   url: https://metallb.github.io/metallb
 ---
-apiVersion: helm.toolkit.fluxcd.io/v2beta2
+apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: metallb
@@ -32,4 +32,4 @@ spec:
   values:
     prometheus:
       metrics:
-        enabled: true
+        enabled: false
