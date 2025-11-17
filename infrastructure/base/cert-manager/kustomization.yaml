@@ -5,5 +5,4 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - cert-manager.yaml
-  - cloudflare-api-token-secret.yaml
-  - clusterissuer.yaml
+  # Cluster-specific secrets and ClusterIssuer live in overlays (e.g. infrastructure/talos/clusterissuer)
