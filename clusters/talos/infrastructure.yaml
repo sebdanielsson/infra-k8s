@@ -1,13 +1,9 @@
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1
-kind: Kustomization
-metadata:
-  name: infrastructure
-  namespace: flux-system
-spec:
-  interval: 5m
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./infrastructure/talos
-  prune: true
+# DEPRECATED
+
+# This file was replaced by per-component Kustomizations:
+#  - metallb.yaml
+#  - traefik.yaml
+#  - portainer-agent.yaml
+#  - cert-manager.yaml
+
+# You can delete this file once all tooling and CI references are updated.
