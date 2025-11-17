@@ -35,7 +35,7 @@ spec:
       replicas: 2
     ingressRoute:
       dashboard:
-        enabled: false
+        enabled: true
     service:
       type: LoadBalancer
     logs:
