@@ -5,3 +5,5 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - cert-manager.yaml
+  - cloudflare-api-token-secret.yaml
+  - clusterissuer.yaml
