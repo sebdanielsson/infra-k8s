@@ -1,9 +1,0 @@
-# DEPRECATED
-
-# This file was replaced by per-component Kustomizations:
-#  - metallb.yaml
-#  - traefik.yaml
-#  - portainer-agent.yaml
-#  - cert-manager.yaml
-
-# You can delete this file once all tooling and CI references are updated.

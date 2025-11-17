@@ -4,4 +4,3 @@ kind: Kustomization
 
 resources:
   - metallb.yaml
-  - metallb-config.yaml
