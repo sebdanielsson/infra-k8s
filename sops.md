@@ -52,8 +52,8 @@ kubectl create secret generic sops-age \
 
 Create a `.sops.yaml` configuration file in the root of your Git repository:
 
-```yaml
-cat <<EOF > ./clusters/${CLUSTER_NAME}/.sops.yaml
+```sh
+cat <<EOF > ./.sops.${CLUSTER_NAME}.yaml
 creation_rules:
   - path_regex: '.*.yaml'
     encrypted_regex: '^(data|stringData)$'
@@ -65,13 +65,25 @@ EOF
 Create a kustomization for reconciling the secrets on the cluster:
 
 ```sh
-flux create kustomization my-secrets \
---source=flux-system \
---path=./clusters/${CLUSTER_NAME} \
---prune=true \
---interval=5m \
---decryption-provider=sops \
---decryption-secret=sops-age
+cat <<EOF > ./clusters/${CLUSTER_NAME}/sops.yaml
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: sops
+  namespace: flux-system
+spec:
+  interval: 5m
+  path: ./clusters/${CLUSTER_NAME}
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
+EOF
 ```
 
 ## Test generating an encrypted secret
