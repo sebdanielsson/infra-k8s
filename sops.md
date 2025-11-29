@@ -9,6 +9,12 @@
 
 ## Generate age key
 
+Set the cluster name variable:
+
+```sh
+export CLUSTER_NAME="<CLUSTER_NAME>"
+```
+
 Start by adding the `*.agekey` file to your `.gitignore` to avoid committing it to your repository:
 
 ```sh
@@ -31,12 +37,6 @@ Store the private key as an environment variable:
 
 ```sh
 export SOPS_AGE_KEY="$(cat age.agekey)"
-```
-
-Save the public key to your flux repository for future encryption of secrets:
-
-```sh
-echo ${AGE_PUBLIC_KEY} > ./clusters/${CLUSTER_NAME}/.sops.age.pub
 ```
 
 Create a secret with the age private key:
@@ -86,7 +86,7 @@ spec:
 EOF
 ```
 
-## Test generating an encrypted secret
+## Test generating an encrypted secret locally (optional)
 
 Create a Kubernetes secret manifest file named `secret.yaml`:
 
