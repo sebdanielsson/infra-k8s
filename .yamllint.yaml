@@ -1,6 +1,10 @@
 ---
 extends: default
 
+ignore: |
+  gotk-components.yaml
+  gotk-sync.yaml
+
 rules:
   line-length: disable
   truthy:
