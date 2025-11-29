@@ -5,3 +5,5 @@ kind: Kustomization
 resources:
   - ../../base/traefik/
   - ./test-secret.yaml
+  - ./dashboard-service.yaml
+  - ./dashboard-httproute.yaml
