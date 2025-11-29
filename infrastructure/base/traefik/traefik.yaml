@@ -13,7 +13,7 @@ spec:
   url: https://traefik.github.io/charts
   interval: 30m
 ---
-apiVersion: helm.toolkit.fluxcd.io/v2beta2
+apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: traefik
