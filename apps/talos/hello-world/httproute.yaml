@@ -10,9 +10,6 @@ spec:
       namespace: traefik
   hostnames:
     - hello.hogwarts.zone
-  tls:
-    - hostname: hello.hogwarts.zone
-      secretName: hello-world-tls
   rules:
     - backendRefs:
         - name: hello-world
