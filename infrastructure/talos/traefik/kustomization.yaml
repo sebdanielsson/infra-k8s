@@ -4,6 +4,6 @@ kind: Kustomization
 
 resources:
   - ../../base/traefik/
-  - ./test-secret.yaml
+  - ./traefik-dashboard-auth.yaml
   - ./dashboard-service.yaml
   - ./dashboard-httproute.yaml

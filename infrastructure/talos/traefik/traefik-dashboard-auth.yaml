@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: dashboard-auth-secret
+    namespace: traefik
+type: kubernetes.io/basic-auth
+stringData:
+    username: ENC[AES256_GCM,data:rWem6c1iCqcw,iv:AxBEVo77RmoEsfWd9BqoHtwwI3881JlLvYpiwnqDGX4=,tag:4qLWuJb1j3zgoUo/CyQYug==,type:str]
+    password: ENC[AES256_GCM,data:xEL1CcCwmVW6fNWddaNQHf6U2bU=,iv:3Lu+qEYyRJYLl/ov+VHiDtVVXVsdar1XycaneeVUjd8=,tag:kVSqDznhxka41PavvZVZiQ==,type:str]
+sops:
+    age:
+        - recipient: age1v6ewuuyxlt7uug0jfnfwcyz7tarh07ygsyyd6q8ade2st5qhk4eqvt66vd
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBNbm5USEJxMEVCMlJ3bGxY
+            OEY0bS9vRGd6elpzVlVwM1Z0YjVQWmtiNWpVCktqNk5kbkc1NmFDL0dhUVR6UFRV
+            NzlRMDFNTUtmUFdOK0JXaXhkTDZwUlEKLS0tICtJNzhVcU8wRm84ckkrbFRicGhY
+            bHRmelVHMVBWeTQ3NXgvdVVKRUtaZm8Kvfk//0FWRXvbKssqvCGg1w3N/fmj+9X8
+            6bKSab0BpI8wNNj5Ydfh8PXrm7MsHDDijG/1/Q9UprRbALFlBgzVnw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2025-11-30T23:52:41Z"
+    mac: ENC[AES256_GCM,data:kd91l3aLU4nSIWyj2yAmowRclXUIa1XSIU+UEnA2TWLIEPtsAvKzy0pKpoLdth+/ZhtL/2EVIkOj8GIT6ME2s6XEj+WoMr2jTvuh7uGNQk8dH3Gxu2RikBQfZCYvOgajoI8nkFmjhhPaEtwB1olOk9t/QZ7gagqw52HqOHpkcyc=,iv:KRstBbFBYvWDH02rvqpikP1xUN7U8jQ48+V32VL2nr4=,tag:nCUv6L1YglHorRWGo1YPhg==,type:str]
+    encrypted_regex: ^(data|stringData)$
+    version: 3.11.0
