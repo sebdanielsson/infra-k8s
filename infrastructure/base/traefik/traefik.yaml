@@ -110,7 +110,7 @@ spec:
           certificateRefs:
             - kind: Secret
               name: wildcard-hogwarts-zone-tls
-              group: ""
+              group: ''
 
     logs:
       general:
