@@ -9,3 +9,4 @@ formatter:
   indent: 2
   retain_line_breaks_single: true
   eof_newline: true
+  force_quote_style: single
