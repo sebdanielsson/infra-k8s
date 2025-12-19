@@ -10,3 +10,4 @@ formatter:
   retain_line_breaks_single: true
   eof_newline: true
   force_quote_style: single
+  force_array_style: block
