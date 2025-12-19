@@ -31,7 +31,7 @@ jobs:
 
       - name: yamlfmt
         run: |
-          go run github.com/google/yamlfmt/cmd/yamlfmt@latest -- .
+          go run github.com/google/yamlfmt/cmd/yamlfmt@main -- .
 
     # - name: Kustomize build
     #   run: |
