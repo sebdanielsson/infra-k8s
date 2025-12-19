@@ -32,7 +32,7 @@ jobs:
       - name: yamlfmt
         run: |
           go install github.com/google/yamlfmt/cmd/yamlfmt@main
-          yamlfmt -check .yamlfmt.yaml -lint .
+          $HOME/go/bin/yamlfmt -check .yamlfmt.yaml -lint .
 
     # - name: Kustomize build
     #   run: |
