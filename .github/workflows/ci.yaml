@@ -31,7 +31,7 @@ jobs:
 
       - name: yamlfmt
         run: |
-          go install github.com/google/yamlfmt/cmd/yamlfmt@main -lint .
+          go run github.com/google/yamlfmt/cmd/yamlfmt@main -conf .yamlfmt.yaml -lint .
 
     # - name: Kustomize build
     #   run: |
