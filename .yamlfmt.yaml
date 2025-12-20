@@ -2,6 +2,11 @@
 #  Yamlfmt configuration file
 #  For more details, see:
 #  https://github.com/google/yamlfmt/blob/main/docs/config-file.md
+match_type: doublestar
+include:
+  - '**/*.yaml'
+exclude:
+  - '**/flux-system/**'
 line_ending: lf
 formatter:
   type: basic
