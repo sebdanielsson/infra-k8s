@@ -9,7 +9,7 @@ spec:
     - name: traefik-gateway
       namespace: traefik
   hostnames:
-    - "traefik.hogwarts.zone"
+    - 'traefik.hogwarts.zone'
   rules:
     - matches:
         - path:
