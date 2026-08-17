@@ -9,6 +9,10 @@ on:
     branches:
       - main
 
+# The lint job only reads the checkout; nothing here writes to the repo.
+permissions:
+  contents: read
+
 jobs:
   lint:
     runs-on: ubuntu-24.04-arm
